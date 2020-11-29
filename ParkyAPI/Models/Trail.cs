@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ParkyAPI.Models.Dtos
+namespace ParkyAPI.Models
 {
     public class Trail
     {
@@ -13,7 +13,7 @@ namespace ParkyAPI.Models.Dtos
         [Required]
         public double Distance { get; set; }
         public enum DifficultyType {Easy, Moderate, Difficult, Expert}
-        public DifficultyType Diffiuculty { get; set; }
+        public DifficultyType Difficulty { get; set; }
         [Required]
         public int NationalParkId { get; set; }
         [ForeignKey("NationalParkId")]
