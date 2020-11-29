@@ -10,8 +10,8 @@ using ParkyAPI.Data;
 namespace ParkyAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201129092304_Add Trails")]
-    partial class AddTrails
+    [Migration("20201129092704_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,7 +54,7 @@ namespace ParkyAPI.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("Created")
+                    b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("Difficulty")
